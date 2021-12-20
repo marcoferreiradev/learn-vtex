@@ -1,41 +1,71 @@
 {
-  "store.home": { 
+  "store.home": {
     "blocks": [
-      "rich-text", "info-card#info-right","info-card#info-left"
+      "search-result-layout.customQuery#home"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "**Utilizando rich text**",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
-    }
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "calçados",
+        "mapField": "ft"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
   },
-  "info-card#info-right":{
-    "props":{
-      "isFullModeStyle": false,
-      "textPosition": "right",
-      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
-      "headline": "Testando Infocard",
-      "subhead": "Give your kitchen a boho style adding vintage apparels.<br>Available until January 2020.",
-      "callToActionMode": "none",
-      "callToActionText": "Explore",
-      "callToActionUrl": "/sale/d",
-      "textAlignment": "center"
-    }
+  "search-result-layout.desktop#home": {
+    "children":[
+      "breadcrumb.search",
+      "flex-layout.row#title-and-order",
+      "flex-layout.row#filter-and-products"
+    ]
   },
-  "info-card#info-left":{
-    "props":{
-      "isFullModeStyle": false,
-      "textPosition": "left",
-      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
-      "headline": "Shining chrome",
-      "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until December 2020",
-      "callToActionMode": "link",
-      "callToActionText": "Go to Collection",
-      "callToActionUrl": "/sale/d",
-      "textAlignment": "center"
-    }
+  "flex-layout.row#title-and-order": {
+    "children": [
+      "flex-layout.col#title",
+      "flex-layout.col#order"
+    ]
+  },
+  "flex-layout.col#title":{
+    "props": {
+      "horizontalAlign": "left"
+    },
+    "children": [
+      "search-title.v2",
+      "total-products.v2"
+    ]
+  },
+  "flex-layout.col#order": {
+    "children": [
+      "order-by.v2"
+    ]
+  },
+  "flex-layout.row#filter-and-products": {
+    "children":[
+      "flex-layout.col#filter",
+      "flex-layout.col#content"
+    ]
+  },
+  "flex-layout.col#filter": {
+    "props": {
+      "width": "20%"
+    },
+    "children": [
+      "filter-navigator.v3"
+    ]
+  },
+  "flex-layout.col#content":{
+    "children": [
+      "search-fetch-previous",
+      "search-content",
+      "search-fetch-more"
+    ]
   }
 }

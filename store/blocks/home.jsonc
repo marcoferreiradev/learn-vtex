@@ -8,7 +8,8 @@
       "responsive-layout.mobile#mobile",
       "info-card#info-right",
       "info-card#info-left",
-      "tab-layout#home"
+      "tab-layout#home",
+      "modal-trigger#first"
     ]
   },
   "flex-layout.row": {
@@ -183,6 +184,27 @@
       "text": "Texto para Electronics",
       "textPosition": "CENTER",
       "font": "t-heading-3"
+    }
+  },
+  "modal-trigger#first":{
+    "children": [
+      "rich-text#trigger",
+      "modal-layout#first"
+    ]
+  },
+  "rich-text#trigger": {
+    "props": {
+      "text": "Clique em mim"
+    }
+  },
+  "modal-layout#first": {
+    "children":[
+      "rich-text#hello"
+    ]
+  },
+  "rich-text#hello": {
+    "props": {
+      "text": "Helloo"     
     }
   }
 }

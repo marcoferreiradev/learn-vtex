@@ -3,11 +3,11 @@
     "blocks": [
       "flex-layout.row",
       "slider-layout#home",
-      "rich-text",
       "responsive-layout.desktop#desktop",
       "responsive-layout.mobile#mobile",
       "info-card#info-right",
       "info-card#info-left",
+      "list-context.product-list",
       "tab-layout#home",
       "modal-trigger#first"
     ]
@@ -43,6 +43,72 @@
     "props": {
       "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/major_appliance_banner___bb10093866a127345ddfbcca3efa5022.png",
       "maxWidth": "100%"
+    }
+  },
+  "list-context.product-list": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": ["slider-layout"]
+  },
+  "product-summary.shelf":{
+    "children":[
+      "modal-trigger#quickview",
+      "product-summary-name",
+      // "product-summary-price" -> Depreciado
+      "product-list-price",
+      "product-selling-price#summary",
+      // "product-price-savings",
+      "product-installments"
+    ]
+  },
+  "product-selling-price#summary": {
+    "props": {
+      // "markers": [
+      //   "highlight"
+      // ],
+      "blockClass": "summary"
+      // "message": "Selling price: {sellingPriceValue}"
+    }
+  },  
+  "modal-trigger#quickview": {
+    "children":[
+      "product-summary-image",
+      "modal-layout#quickview"
+    ]
+  },
+  "modal-layout#quickview": {
+    "children":[
+      "flex-layout.row#modal-product"
+    ]
+  },
+  "flex-layout.row#modal-product":{
+    "children": [
+      "flex-layout.col#images",
+      "flex-layout.col#info"
+    ]
+  },
+  "flex-layout.col#images":{
+    "children": [
+      "product-images"
+    ],
+    "props": {
+      "paddingLeft": 5,
+      "paddingRight": 5
+    }
+  },
+  "flex-layout.col#info":{
+    "children": [
+      "product-summary-name",
+      "product-summary-sku-selector",
+      "add-to-cart-button"
+    ],
+    "props": {
+      "width": "40%",
+      "props": {
+        "paddingLeft": 10,
+        "paddingRight": 10
+      }
     }
   },
   "responsive-layout.desktop#desktop": {
@@ -89,14 +155,6 @@
       } ,
       "alt": "Coffee Makers Collection",
       "maxWidth": "100%"
-    }
-  },
-  "rich-text": {
-    "props": {
-      "text": "**Utilizando rich text**",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
     }
   },
   "info-card#info-right": {

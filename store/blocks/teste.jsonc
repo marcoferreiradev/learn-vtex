@@ -26,7 +26,7 @@
   },
   "rich-text#about-content": {
     "props": {
-      "text": "### This is the _VTEX Minimum Theme_, \n you can use it to test blocks usage and build your first store from scratch."
+      "text": "## Our history \n\n This store was created to be used on VTEX Training Wee BRA. You can click [here](https://developers.vtex.com/) to know more about the courses!!\n\n ### This is the _VTEX Minimum Theme_, \n you can use it to test blocks usage and build your first store from scratch."
     }
   },
   "image#about-us": {

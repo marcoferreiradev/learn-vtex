@@ -2,5 +2,9 @@
   "store.custom#teste": {
     "path": "/teste",
     "title": "Teste local" 
+  },
+  "store.custom#landing": {
+    "path":"/landing",
+    "title":"Landing"
   }
 }

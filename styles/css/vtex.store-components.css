@@ -1,3 +1,38 @@
 .imageElement--cover {
-  object-fit: cover;
+	object-fit: cover;
+}
+
+.infoCardHeadline--clearence,
+.infoCardHeadline--vintage {
+	font-family: serif;
+	font-size: 2.25rem;
+	font-weight: bold;
+	color: black;
+	border: 2px solid black;
+	padding: 24px;
+}
+
+.infoCardCallActionContainer--clearence :global(.vtex-button),
+.infoCardCallActionContainer--vintage :global(.vtex-button) {
+	color: white;
+	background-color: gray;
+	border: transparent;
+}
+
+.infoCardCallActionContainer--clearence :global(.vtex-button):hover,
+.infoCardCallActionContainer--vintage :global(.vtex-button):hover {
+	color: gray;
+	background-color: white;
+	border: transparent;
+}
+
+.infoCardContainer--vintage {
+	background-color: #edcfd1;
+}
+
+.infoCardContainer--vintage,
+.infoCardContainer--clearence {
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 0;
 }

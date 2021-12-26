@@ -10,7 +10,9 @@
       "info-card#info-left",
       "list-context.product-list",
       "tab-layout#home",
-      "modal-trigger#first"
+      "modal-trigger#first",
+      "info-card#clearence",
+      "info-card#vintage"
     ]
   },
   "stack-layout#cta": {
@@ -75,10 +77,12 @@
     "blocks": [
       "product-summary.shelf#home"
     ],
-    "children": ["slider-layout"]
+    "children": [
+      "slider-layout"
+    ]
   },
-  "product-summary.shelf#home":{
-    "children":[
+  "product-summary.shelf#home": {
+    "children": [
       "modal-trigger#quickview",
       "product-summary-name",
       // "product-summary-price" -> Depreciado
@@ -96,25 +100,25 @@
       "blockClass": "summary"
       // "message": "Selling price: {sellingPriceValue}"
     }
-  },  
+  },
   "modal-trigger#quickview": {
-    "children":[
+    "children": [
       "product-summary-image",
       "modal-layout#quickview"
     ]
   },
   "modal-layout#quickview": {
-    "children":[
+    "children": [
       "flex-layout.row#modal-product"
     ]
   },
-  "flex-layout.row#modal-product":{
+  "flex-layout.row#modal-product": {
     "children": [
       "flex-layout.col#images",
       "flex-layout.col#info"
     ]
   },
-  "flex-layout.col#images":{
+  "flex-layout.col#images": {
     "children": [
       "product-images"
     ],
@@ -123,7 +127,7 @@
       "paddingRight": 5
     }
   },
-  "flex-layout.col#info":{
+  "flex-layout.col#info": {
     "children": [
       "product-summary-name",
       "product-summary-sku-selector",
@@ -178,7 +182,7 @@
       "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Mobile.jpg?q=1",
       "link": {
         "url": "/small-appliances/coffee-makers"
-      } ,
+      },
       "alt": "Coffee Makers Collection",
       "maxWidth": "100%"
     }
@@ -209,20 +213,20 @@
       "textAlignment": "center"
     }
   },
-  "tab-layout#home":{
+  "tab-layout#home": {
     "children": [
       "tab-list#home",
       "tab-content#home"
     ]
   },
   "tab-list#home": {
-    "children":[
+    "children": [
       "tab-list.item#home1",
       "tab-list.item#home2"
     ]
   },
-  "tab-content#home":{
-    "children":[
+  "tab-content#home": {
+    "children": [
       "tab-content.item#home1",
       "tab-content.item#home2"
     ]
@@ -270,7 +274,7 @@
       "font": "t-heading-3"
     }
   },
-  "modal-trigger#first":{
+  "modal-trigger#first": {
     "children": [
       "rich-text#trigger",
       "modal-layout#first"
@@ -282,13 +286,39 @@
     }
   },
   "modal-layout#first": {
-    "children":[
+    "children": [
       "rich-text#hello"
     ]
   },
   "rich-text#hello": {
     "props": {
-      "text": "Helloo"     
+      "text": "Helloo"
+    }
+  },
+  "info-card#clearence": {
+    "props": {
+      "id": "info-card-clearence",
+      "isFullModeStyle": false,
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "textPosition": "left",
+      "headline": "Clearence Sale",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "textAligment": "center",
+      "blockClass": "clearence"
+    }
+  },
+  "info-card#vintage": {
+    "props": {
+      "id": "info-card-vintage",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
+      "headline": "Vintage",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "textAlignment": "center",
+      "blockClass": "vintage"
     }
   }
 }

@@ -41,6 +41,11 @@
       "product-summary-price"
     ]
   },
+  "product-summary-image": {
+    "props": {
+      "width": 281
+    }
+  },
 
   "stack-layout#prodsum": {
     "children": [
